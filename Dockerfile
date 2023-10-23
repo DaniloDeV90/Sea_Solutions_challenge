@@ -5,7 +5,7 @@ RUN apt-get install openjdk-11-jdk -y
 
 COPY ./gradle/wrapper/gradle-wrapper.jar /app/gradle/wrapper/
 COPY  ./gradle/wrapper/gradle-wrapper.properties /app/gradle/wrapper/
-RUN chmod +x /app/gradlew
+RUN chmod +x gradlew
 RUN apt-get install gradle -y
 
 RUN ./gradlew build
