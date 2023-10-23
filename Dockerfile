@@ -8,10 +8,6 @@ COPY  ./gradle/wrapper/gradle-wrapper.properties /app/gradle/wrapper/
 
 RUN apt-get install gradle -y
 WORKDIR /app
-USER root
-COPY --from=0 /app/Sea_Solutions_Challenge /app
-RUN chown -R gradle /app
-USER gradle
 RUN ./gradlew build
 
 FROM openjdk:11-jdk-slim
