@@ -9,7 +9,7 @@ COPY  ./gradle/wrapper/gradle-wrapper.properties /app/gradle/wrapper/
 RUN apt-get install gradle -y
 WORKDIR /Sea_Solutions_Challenge
 CMD ["./gradlew", "clean", "bootJar"]
-RUN ./gradlew build
+RUN gradle build
 
 FROM openjdk:11-jdk-slim
 
