@@ -3,7 +3,7 @@ FROM ubuntu:latest AS build
 RUN apt-get update
 RUN apt-get install openjdk-11-jdk -y
 COPY . .
-FROM gradle:7.2-jdk11
+
 RUN apt-get install gradle -y
 
 CMD ["./gradlew", "clean", "bootJar"]
