@@ -4,7 +4,7 @@ import javax.validation.constraints.NotBlank;
 
 public class FindBySetorDTO {
 
-    @NotBlank
+    @NotBlank (message = "nome do setor não deve está nulo!")
     private String nomeSetor;
 
     public String getNomeSetor() {

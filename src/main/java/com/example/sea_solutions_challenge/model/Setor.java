@@ -20,21 +20,22 @@ public class Setor  implements Serializable {
     @Column (unique = true)
     private String nomeSetor;
 
-    @OneToOne (mappedBy = "setor")
-    private  Trabalhador trabalhador;
+
+    @OneToMany (mappedBy = "setor", fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
+    private  List <Trabalhador> trabalhadores = new ArrayList<>();
 
 
 
-    @OneToMany (mappedBy = "setor", cascade = CascadeType.ALL)
-    private List <Cargo> cargos = new ArrayList<>();
 
+    @OneToMany  (mappedBy = "setor", fetch = FetchType.LAZY, cascade = CascadeType.ALL )
+    private  List <Cargo> cargos = new ArrayList<>();
 
-    public List<Cargo> getCargos() {
-        return cargos;
+    public List<Trabalhador> getTrabalhadores() {
+        return trabalhadores;
     }
 
-    public void setCargos(List<Cargo> cargos) {
-        this.cargos = cargos;
+    public void setTrabalhadores(List<Trabalhador> trabalhadores) {
+        this.trabalhadores = trabalhadores;
     }
 
     public String getNomeSetor() {
@@ -45,11 +46,11 @@ public class Setor  implements Serializable {
         this.nomeSetor = nomeSetor;
     }
 
-    public Trabalhador getTrabalhador() {
-        return trabalhador;
+    public List<Cargo> getCargos() {
+        return cargos;
     }
 
-    public void setTrabalhador(Trabalhador trabalhador) {
-        this.trabalhador = trabalhador;
+    public void setCargos(List<Cargo> cargos) {
+        this.cargos = cargos;
     }
 }

@@ -5,11 +5,11 @@ import javax.validation.constraints.Size;
 
 public class CreateCargoDTO  {
 
-    @NotBlank
+    @NotBlank (message =  "cargo não deve está em branco!")
     @Size (max = 255)
     private  String nomeCargo;
 
-    @NotBlank
+    @NotBlank  (message = "nome do setor não deve está em branco!")
     @Size (max = 255)
     private  String nomeSetor;
 

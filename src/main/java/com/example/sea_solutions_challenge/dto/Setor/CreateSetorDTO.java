@@ -8,8 +8,8 @@ import javax.validation.constraints.Size;
 
 public class CreateSetorDTO {
 
-    @NotBlank
-    @Size(max = 255)
+    @NotBlank (message = "Nome do setor não pode ser nulo!")
+    @Size(max = 255, message = "nome grande demais!")
  private  String nomeSetor;
 
     public String getNomeSetor() {

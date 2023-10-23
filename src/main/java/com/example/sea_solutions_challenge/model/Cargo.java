@@ -15,11 +15,11 @@ public class Cargo  implements Serializable {
     @GeneratedValue (strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column (unique = true)
-    private  String NomeCargo;
+    @Column
+    private  String cargo;
 
 
-   @OneToOne (mappedBy = "cargo")
+   @OneToOne (mappedBy = "cargo" , cascade = CascadeType.ALL)
     private  Trabalhador trabalhador;
 
     @JsonIgnore
@@ -27,20 +27,13 @@ public class Cargo  implements Serializable {
     @JoinColumn(name = "setor_id")
     private Setor setor;
 
-    public Setor getSetor() {
-        return setor;
+
+    public String getCargo() {
+        return cargo;
     }
 
-    public void setSetor(Setor setor) {
-        this.setor = setor;
-    }
-
-    public String getNomeCargo() {
-        return NomeCargo;
-    }
-
-    public void setNomeCargo(String nomeCargo) {
-        NomeCargo = nomeCargo;
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 
     public Trabalhador getTrabalhador() {
@@ -49,5 +42,13 @@ public class Cargo  implements Serializable {
 
     public void setTrabalhador(Trabalhador trabalhador) {
         this.trabalhador = trabalhador;
+    }
+
+    public Setor getSetor() {
+        return setor;
+    }
+
+    public void setSetor(Setor setor) {
+        this.setor = setor;
     }
 }

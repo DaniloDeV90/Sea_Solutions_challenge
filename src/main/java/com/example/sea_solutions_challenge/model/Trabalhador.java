@@ -1,5 +1,7 @@
 package com.example.sea_solutions_challenge.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.UUID;
@@ -17,11 +19,15 @@ public class Trabalhador implements Serializable {
 
     @Column (nullable = false)
     private  String nome;
+
+
+    @JsonIgnore
     @OneToOne
     @JoinColumn (name = "cargo_id",  nullable = false)
     private  Cargo  cargo;
 
-    @OneToOne
+    @JsonIgnore
+    @ManyToOne
     @JoinColumn (name = "setor_id",  nullable = false)
     private  Setor  setor;
 

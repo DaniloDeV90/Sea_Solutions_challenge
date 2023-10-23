@@ -9,19 +9,23 @@ public class CreateTrabalhadorDTO {
 
 
 
-    @NotBlank
+    @NotBlank (message = "nome não pode ser nulo!")
     @Size(max = 255)
     private  String nome;
-
-@NotBlank
-@Size (max = 255)
+    @NotBlank (message = "Cargo não pode ser nulo!")
+    @Size (max = 255)
     private  String cargo;
+    @NotBlank (message = "CPF não pode ser nulo!")
+    private String cpf;
+     @NotBlank (message = "Nome do setor não pode ser nulo!")
+     private  String nomeSetor;
 
-
-@NotBlank
-
-private String cpf;
-
+    public String getNomeSetor() {
+        return nomeSetor;
+    }
+    public void setNomeSetor(String nomeSetor) {
+        this.nomeSetor = nomeSetor;
+    }
     public String getCpf() {
         return cpf;
     }
