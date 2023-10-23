@@ -3,8 +3,8 @@ FROM ubuntu:latest AS build
 RUN apt-get update
 RUN apt-get install openjdk-11-jdk -y
 
-COPY ./gradle-wrapper.jar /app/gradle/wrapper/
-COPY ./gradle-wrapper.properties /app/gradle/wrapper/
+COPY ./gradle/wrapper/gradle-wrapper.jar /app/gradle/wrapper/
+COPY  gradle/wrapper/gradle-wrapper.properties /app/gradle/wrapper/
 RUN chmod +x /app/gradlew
 RUN apt-get install gradle -y
 
