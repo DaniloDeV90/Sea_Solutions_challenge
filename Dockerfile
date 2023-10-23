@@ -5,11 +5,11 @@ RUN apt-get install openjdk-11-jdk -y
 
 COPY ./gradle/wrapper/gradle-wrapper.jar /app/gradle/wrapper/
 COPY  ./gradle/wrapper/gradle-wrapper.properties /app/gradle/wrapper/
-RUN apt-get install gradle:7.2.1-jdk11 AS build
-
+FROM gradle:7.2-jdk11
+RUN apt-get install gradle -y
 WORKDIR /Sea_Solutions_Challenge
 CMD ["./gradlew", "clean", "bootJar"]
-RUN  gradle clean build
+RUN ./gradlew build
 
 FROM openjdk:11-jdk-slim
 
