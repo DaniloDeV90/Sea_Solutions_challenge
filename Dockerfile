@@ -7,7 +7,7 @@ FROM gradle:7.2-jdk11
 RUN apt-get install gradle -y
 WORKDIR /Sea_Solutions_Challenge
 CMD ["./gradlew", "clean", "bootJar"]
-RUN ./gradlew build
+RUN ./gradlew build bootjar
 
 FROM openjdk:11-jdk-slim
 
