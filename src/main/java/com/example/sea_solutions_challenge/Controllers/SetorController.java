@@ -20,7 +20,7 @@ import java.util.List;
 @RestController
 @CrossOrigin (origins = "*" ,maxAge = 5600)
 @RequestMapping("/setor")
-@Tag(name = "Setore Controller")
+@Tag(name = "Setor Controller")
 public class SetorController {
 
    final ISetorService iSetorService;

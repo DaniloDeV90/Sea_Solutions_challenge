@@ -8,6 +8,7 @@ RUN gradle clean bootJar
 
 FROM openjdk:11-jdk-slim
 EXPOSE 8080
+
 WORKDIR /app
 COPY --from=build /app/build/libs/Sea_Solutions_Challenge-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
