@@ -3,7 +3,7 @@
 
 <span> Documentação completa no swagger </span>
 
-<span > Link: https://sea-solutions-n71x.onrender.com/swagger-ui/index.html </span>
+<span > Link: https://seasolutionschallenge-production.up.railway.app/swagger-ui/index.html </span>
 
 <span> ATENÇÃO: digite /v3/api-docs  na barra de pesquisa </span>
 
@@ -18,7 +18,7 @@
 
 <h3> Retornar todos os setores </h3>
 
-<span>GET   https://sea-solutions-n71x.onrender.com/setor </span> <br> <br>
+<span>GET   https://seasolutionschallenge-production.up.railway.app/setor </span> <br> <br>
 
 
 
@@ -26,7 +26,7 @@
 
 <h3>Criar um setor  </h3>
 
-<span> POST    https://sea-solutions-n71x.onrender.com/setor </span>
+<span> POST    https://seasolutionschallenge-production.up.railway.app/setor </span>
 <br> <br>
 
 <span> formato json: </span> <br> 
@@ -37,7 +37,7 @@
 
 <h3> Editar  um setor </h3>
 
-<span> PUT    https://sea-solutions-n71x.onrender.com/setor </span>
+<span> PUT    https://seasolutionschallenge-production.up.railway.app/setor </span>
 
 <span> formato json: </span> <br> 
 
@@ -48,7 +48,7 @@
 
 <h3> Excluir  um setor </h3>
 
-<span> DELETE    https://sea-solutions-n71x.onrender.com/setor </span>
+<span> DELETE    https://seasolutionschallenge-production.up.railway.app/setor </span>
 
 <span> formato json: </span> <br> 
 { <br>
@@ -63,7 +63,7 @@
 
 <h3> Criar um cargo </h3>
 
-<span>  POST    https://sea-solutions-n71x.onrender.com/cargo </span>
+<span>  POST    https://seasolutionschallenge-production.up.railway.app/cargo </span>
 
 <span> formato json: </span> <br> 
 { <br>
@@ -74,7 +74,7 @@
 
 
 
-<span>  PUT    https://sea-solutions-n71x.onrender.com/cargo </span>
+<span>  PUT    https://seasolutionschallenge-production.up.railway.app/cargo </span>
 
 
 <span> formato json: </span> <br> 
@@ -87,7 +87,7 @@
 
 
 
-<span> DELETE    https://sea-solutions-n71x.onrender.com/cargo </span>
+<span> DELETE    https://seasolutionschallenge-production.up.railway.app/cargo </span>
 
 
 <span> formato json: </span> <br> 
@@ -102,7 +102,7 @@
 <h3> criar trabalhador </h3>
 
 
-<span>  POST    https://sea-solutions-n71x.onrender.com/trabalhador </span>
+<span>  POST    https://seasolutionschallenge-production.up.railway.app/trabalhador </span>
 
 <span> formato json: </span> <br> 
 { <br>
